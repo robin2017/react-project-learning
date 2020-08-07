@@ -1,36 +1,34 @@
 import React from 'react'
-import { Form, Input, Checkbox } from '@alifd/next';
-const FormItem = Form.Item;
-
-const formItemLayout = {
-    labelCol: {
-        fixedSpan: 10
-    },
-    wrapperCol: {
-        span: 14
-    }
-};
+import moment from 'moment'
+import { Form, Input, Checkbox, Select, DatePicker } from '@alifd/next';
 export default () => {
+    const levels = ['first', 'second']
     const handleSubmit = (values) => {
         console.log('Get form value:', values);
-    };
+    }
+    // 时间必须为今天之前
+    const disabledAfter = (date) => date.format('YYYYMMDD') >= moment().format('YYYYMMDD')
     return (
-        <Form style={{ width: '60%' }} {...formItemLayout} >
-            <FormItem label="baseUsername:">
-                <p>Fixed Name</p>
-            </FormItem>
-            <FormItem label="password:">
+        <Form inline>
+            <Form.Item label="密码:" required >
                 <Input htmlType="password" name="basePass" placeholder="Please Enter Password" />
-            </FormItem>
-            <FormItem label="Note:" help="something">
-                <Input.TextArea placeholder="something" name="baseRemark" />
-            </FormItem>
-            <FormItem label="Agreement:">
-                <Checkbox name="baseAgreement" defaultChecked>Agree</Checkbox>
-            </FormItem>
-            <FormItem label=" ">
-                <Form.Submit onClick={handleSubmit}>Confirm</Form.Submit>
-            </FormItem>
+            </Form.Item>
+            <Form.Item label='级别'>
+                <Select name="baseLevel" defaultValue="first">
+                    {/* Select.Option必须有key，Form.Item不必有key */}
+                    {levels.map(item => <Select.Option value={item} key={item}>{item}</Select.Option>)}
+                </Select>
+            </Form.Item>
+            <Form.Item label="时间:">
+                <DatePicker name='baseTime' disabledDate={disabledAfter}></DatePicker>
+            </Form.Item>
+            <Form.Item label="同意:">
+                <Checkbox name="baseAgreement">Agree</Checkbox>
+            </Form.Item>
+            <Form.Item>
+                {/* Form.Submit是Form非常重要子组件，否则拿不到数据 */}
+                <Form.Submit onClick={handleSubmit} type='primary'>确认</Form.Submit>
+            </Form.Item>
         </Form>
     )
 }
