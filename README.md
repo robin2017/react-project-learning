@@ -20,4 +20,5 @@
 + fusion组件具体熟悉参见印象笔记
 + 安装：`npm i @alifd/next`
 + 底层尽然还依赖了momnet
-
++ 在Button组件上加style可以生效
+    + `<Button type="primary" style={{color:'red'}}>hello</Button>`

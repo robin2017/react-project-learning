@@ -4,7 +4,7 @@ import {Button} from '@alifd/next'
 export default () => {
     return (
         <div>
-            <Button type="primary">hello</Button>
+            <Button type="primary" style={{color:'red'}}>hello</Button>
         </div>
     )
 }
