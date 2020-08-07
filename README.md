@@ -15,6 +15,9 @@
 + 需要安装node-sass即可,正常下载好慢，最后制定下载源
 + `npm config set sass-binary-site http://npm.taobao.org/mirrors/node-sass`
 
-#### 5、熟悉fusion表单
-
+#### 5、熟悉fusion组件
++ 开源地址；`https://fusion.design/`
++ fusion组件具体熟悉参见印象笔记
++ 安装：`npm i @alifd/next`
++ 底层尽然还依赖了momnet
 
