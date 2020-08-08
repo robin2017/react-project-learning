@@ -2,6 +2,7 @@ import React from 'react'
 import Index from '../pages/hello'
 import Fusion from '../pages/fusion'
 import FusionForm from '../pages/fusion/form'
+import FusionShell from '../pages/fusion/shell'
 import './index.scss'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 export default () => {
@@ -19,13 +20,16 @@ export default () => {
                         <li>
                             <Link to="/fusion-form">fusion示例-表单</Link>
                         </li>
-
+                        <li>
+                            <Link to="/fusion-shell">fusion示例-shell</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="robin-content">
                     <Route path='/' exact component={Index} />
                     <Route path='/fusion' exact component={Fusion} />
                     <Route path='/fusion-form' exact component={FusionForm} />
+                    <Route path='/fusion-shell' exact component={FusionShell} />
                 </div>
             </div>
 
