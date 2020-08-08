@@ -23,3 +23,6 @@
 + 底层尽然还依赖了momnet
 + 在Button组件上加style可以生效
     + `<Button type="primary" style={{color:'red'}}>hello</Button>`
+
+#### 6、熟悉fusion组件-表单
++ fusion的Form.Item上style可以生效

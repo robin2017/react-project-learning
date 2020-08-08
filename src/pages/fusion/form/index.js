@@ -13,7 +13,7 @@ export default () => {
             <Form.Item label="密码:" required >
                 <Input htmlType="password" name="basePass" placeholder="Please Enter Password" />
             </Form.Item>
-            <Form.Item label='级别'>
+            <Form.Item label='级别' style={{backgroundColor:'red'}}>
                 <Select name="baseLevel" defaultValue="first">
                     {/* Select.Option必须有key，Form.Item不必有key */}
                     {levels.map(item => <Select.Option value={item} key={item}>{item}</Select.Option>)}
