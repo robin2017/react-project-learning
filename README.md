@@ -14,6 +14,7 @@
 #### 4、添加样式scss
 + 需要安装node-sass即可,正常下载好慢，最后制定下载源
 + `npm config set sass-binary-site http://npm.taobao.org/mirrors/node-sass`
++ 注意文件后缀是scss，不是sass
 
 #### 5、熟悉fusion组件
 + 开源地址；`https://fusion.design/`

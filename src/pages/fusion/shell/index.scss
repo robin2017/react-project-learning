@@ -1,0 +1,23 @@
+.shell-container {
+    .shell-iframe {
+        width: 100%;
+        height:500px;
+        border: 1px solid red
+    }
+    .shell-img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+    .shell-navigation{
+        justify-content: space-between !important;
+        &-title{
+            ul li{
+                display:inline-block;
+                margin-left:50px;
+                cursor: pointer;
+            }
+        }
+    }
+}
