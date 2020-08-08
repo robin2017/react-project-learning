@@ -4,12 +4,16 @@
   "private": true,
   "dependencies": {
     "@alifd/next": "^1.20.25",
+    "@formily/next": "^1.2.11",
+    "@formily/next-components": "^1.2.11",
+    "mfetch": "^0.2.27",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

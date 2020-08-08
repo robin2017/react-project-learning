@@ -26,3 +26,7 @@
 
 #### 6、熟悉fusion组件-表单
 + fusion的Form.Item上style可以生效
+
+
+#### 7、熟悉formily组件
++ 需要安装@formily/next和它的依赖styled-components
