@@ -8,11 +8,11 @@ export default () => {
     return (
         <div className='shell-container'>
             <Shell className='shell-iframe'  >
-                <Shell.Branding>
+                <Shell.Branding className='shell-branding'>
                     <img className='shell-img' src={AppleImg} />
                     <span style={{ marginLeft: 10 }}>苹果科技有限公司</span>
                 </Shell.Branding>
-                <Shell.Navigation direction="hoz" className='shell-navigation'>
+                <Shell.Navigation className='shell-navigation' direction="hoz" >
                     <div className='shell-navigation-title'>
                         <ul>
                             <li>首页</li>
