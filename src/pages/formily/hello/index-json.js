@@ -1,20 +1,15 @@
 import React from 'react'
 import {
     SchemaForm,
-    SchemaMarkupField as Field,
     FormButtonGroup,
-
     Submit,
     Reset
 } from '@formily/next'
-import { Input,Select } from '@alifd/next'
+import { Input, Select } from '@alifd/next'
 export default () => {
     return (
         <SchemaForm
-            components={{
-                Input,
-                Select
-            }}
+            components={{ Input, Select }}
             onSubmit={console.log}
             schema={{
                 type: 'object',
@@ -26,10 +21,10 @@ export default () => {
                     },
                     gender: {
                         type: "string",
-                        enum: ['男','女'],
+                        enum: ['男', '女'],
                         title: "性别",
                         'x-component': "Select"
-                    },
+                    }
                 }
             }}>
             <FormButtonGroup  >
@@ -38,5 +33,5 @@ export default () => {
             </FormButtonGroup>
         </SchemaForm>
     )
-
 }
+
