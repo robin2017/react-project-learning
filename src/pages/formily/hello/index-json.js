@@ -8,7 +8,7 @@ import {
 import { Input, Select } from '@alifd/next'
 export default () => {
     return (
-        <SchemaForm
+        <SchemaForm inline
             components={{ Input, Select }}
             onSubmit={console.log}
             schema={{
@@ -28,8 +28,7 @@ export default () => {
                 }
             }}>
             <FormButtonGroup  >
-                <Submit>查询</Submit>
-                <Reset>重置</Reset>
+                <Submit /> <Reset />
             </FormButtonGroup>
         </SchemaForm>
     )

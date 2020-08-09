@@ -14,6 +14,7 @@ import { Table } from 'antd'
 import 'antd/dist/antd.css'
 
 const service = ({ values, pagination, sorter = {}, filters = {} }) => {
+  console.log('service输入values, pagination, sorter = {}, filters = {}:',values, pagination, sorter , filters )
   return fetch({
     url: '/api',
     data: {
@@ -27,12 +28,14 @@ const service = ({ values, pagination, sorter = {}, filters = {} }) => {
   })
     .then(res => res.json())
     .then(({ results, info }) => {
-
       return {
         dataSource: results,
         ...pagination,
         total: 200
       }
+    }).then(res=>{
+      console.log('service输出：',res)
+      return res
     })
 }
 
