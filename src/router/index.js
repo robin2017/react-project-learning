@@ -7,6 +7,8 @@ import FormilyHello from '../pages/formily/hello/index-jsx'
 import FormilyHello2 from '../pages/formily/hello/index-json'
 import FormilyQueryList from '../pages/formily/querylist'
 import FormilyInsertRecord from '../pages/formily/insertRecord'
+import FormTableAntd from '../pages/formTable/antd'
+import FormTableFusion from '../pages/formTable/fusionNext'
 import './index.scss'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 export default () => {
@@ -39,6 +41,12 @@ export default () => {
                         <li>
                             <Link to="/formily-insert-record">formily示例-插入记录</Link>
                         </li>
+                        <li>
+                            <Link to="/form-table-fusion">表单+表格：fusion</Link>
+                        </li>
+                        <li>
+                            <Link to="/form-table-antd">表单+表格：antd</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="robin-content">
@@ -50,6 +58,8 @@ export default () => {
                     <Route path='/formily-hello2' exact component={FormilyHello2} />
                     <Route path='/formily-query-list' exact component={FormilyQueryList} />
                     <Route path='/formily-insert-record' exact component={FormilyInsertRecord} />
+                    <Route path='/form-table-antd' exact component={FormTableAntd} />
+                    <Route path='/form-table-fusion' exact component={FormTableFusion} />
                 </div>
             </div>
 
