@@ -8,7 +8,7 @@ const mockDataSource = [
 export default () => {
     const [dataSource, setDataSource] = useState([])
     const onSubmit = (value) => {
-        console.log(value)
+        console.log('提交：', value)
         setDataSource(mockDataSource)
     }
     return (
