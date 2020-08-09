@@ -5,6 +5,7 @@ import FusionForm from '../pages/fusion/form'
 import FusionShell from '../pages/fusion/shell'
 import FormilyHello from '../pages/formily/hello'
 import FormilyQueryList from '../pages/formily/querylist'
+import FormilyInsertRecord from '../pages/formily/insertRecord'
 import './index.scss'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 export default () => {
@@ -31,6 +32,9 @@ export default () => {
                         <li>
                             <Link to="/formily-query-list">formily示例-查询列表</Link>
                         </li>
+                        <li>
+                            <Link to="/formily-insert-record">formily示例-插入记录</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="robin-content">
@@ -40,6 +44,7 @@ export default () => {
                     <Route path='/fusion-shell' exact component={FusionShell} />
                     <Route path='/formily-hello' exact component={FormilyHello} />
                     <Route path='/formily-query-list' exact component={FormilyQueryList} />
+                    <Route path='/formily-insert-record' exact component={FormilyInsertRecord} />
                 </div>
             </div>
 

@@ -1,5 +1,5 @@
 import React from 'react'
- 
+
 import {
   SchemaForm,
   SchemaMarkupField as Field,
@@ -7,15 +7,15 @@ import {
   FormButtonGroup,
   Submit,
   Reset
-} from '@formily/next' // 或者 
-import { Input } from '@formily/next-components' // 或者@formily/next-components
+} from '@formily/antd' // 或者 @formily/next
+import { Input } from '@formily/antd-components' // 或者@formily/next-components
 import { fetch } from 'mfetch'
-import { Table } from '@alifd/next'
- 
+import { Table } from 'antd'
+import 'antd/dist/antd.css'
 
 const service = ({ values, pagination, sorter = {}, filters = {} }) => {
   return fetch({
-    url: 'https://randomuser.me/api',
+    url: '/api',
     data: {
       results: pagination.pageSize,
       sortField: sorter.field,
@@ -27,6 +27,7 @@ const service = ({ values, pagination, sorter = {}, filters = {} }) => {
   })
     .then(res => res.json())
     .then(({ results, info }) => {
+
       return {
         dataSource: results,
         ...pagination,
@@ -59,8 +60,12 @@ const columns = [
 ]
 
 export default () => {
+  /**
+   *1、 useFormTableQuery：快速开发一个查询列表项
+   *2、 该函数的输入和输出都是严格格式！！
+   * */
   const { form, table } = useFormTableQuery(service)
-  console.log('---bota---:',table,columns)
+  console.log('---bota---form,table数据为:', form, table)
   return (
     <>
       <SchemaForm

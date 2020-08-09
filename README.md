@@ -30,3 +30,7 @@
 
 #### 7、熟悉formily组件
 + 需要安装@formily/next和它的依赖styled-components
++ 因为不熟悉fusion next的table组件，这里引入了antd
++ table数据跨域，临时解决方案：在package.json中配置proxy字段
+
+#### 8、开发基于表单的数据查询和新增功能

@@ -4,8 +4,12 @@
   "private": true,
   "dependencies": {
     "@alifd/next": "^1.20.25",
+    "@formily/antd": "^1.2.11",
+    "@formily/antd-components": "^1.2.11",
     "@formily/next": "^1.2.11",
     "@formily/next-components": "^1.2.11",
+    "@formily/printer": "^1.2.11",
+    "antd": "^4.5.2",
     "mfetch": "^0.2.27",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
@@ -34,5 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "https://randomuser.me"
 }
