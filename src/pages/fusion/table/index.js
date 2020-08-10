@@ -29,7 +29,8 @@ export default () => {
                     }
                 }
             }}>
-            <Table.Column title="Id" dataIndex="id" width={200} />
+            {/* id列可以不展示，但是数据中必须有这列 */}
+            {/* <Table.Column title="Id" dataIndex="id" width={200} /> */}
             <Table.Column title="Title" dataIndex="title.name" width={200} />
             <Table.Column title="Time" dataIndex="time" width={200} />
             <Table.Column cell={(value, index, record) => <button>Remove({record.id})</button>} width={200} />
