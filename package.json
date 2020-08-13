@@ -10,6 +10,7 @@
     "@formily/next-components": "^1.2.11",
     "@formily/printer": "^1.2.11",
     "antd": "^4.5.2",
+    "bizcharts": "^4.0.12",
     "mfetch": "^0.2.27",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",

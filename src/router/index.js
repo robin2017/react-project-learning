@@ -10,6 +10,7 @@ import FormilyQueryList from '../pages/formily/querylist'
 import FormilyInsertRecord from '../pages/formily/insertRecord'
 import FormTableAntd from '../pages/formTable/antd'
 import FormTableFusion from '../pages/formTable/fusionNext'
+import BizChartsHello from '../pages/bizcharts/hello'
 import './index.scss'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 export default () => {
@@ -51,6 +52,9 @@ export default () => {
                         <li>
                             <Link to="/form-table-antd">表单+表格：antd</Link>
                         </li>
+                        <li>
+                            <Link to="/biz-charts-hello">bizCharts:hello</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="robin-content">
@@ -65,6 +69,7 @@ export default () => {
                     <Route path='/formily-insert-record' exact component={FormilyInsertRecord} />
                     <Route path='/form-table-antd' exact component={FormTableAntd} />
                     <Route path='/form-table-fusion' exact component={FormTableFusion} />
+                    <Route path='/biz-charts-hello' exact component={BizChartsHello} />
                 </div>
             </div>
 
