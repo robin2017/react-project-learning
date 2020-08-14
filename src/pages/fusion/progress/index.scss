@@ -1,0 +1,25 @@
+.progress-container {
+    .next-progress-circle {
+        width: 210px !important;
+        height: 210px !important;
+    }
+    .next-progress-circle-container {
+        .next-progress-circle-underlay {
+            stroke-width: 6px;
+        }
+        .next-progress-circle-overlay {
+            stroke-width: 6px;
+        }
+    }
+    .next-progress-circle-text {
+        .comp-content {
+            .comp-title {
+                font-size: 16px;
+                color: #999;
+            }
+            .comp-text {
+                font-size: 30px;
+            }
+        }
+    }
+}
