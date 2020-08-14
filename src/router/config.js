@@ -12,6 +12,7 @@ import FormTableFusion from '../pages/formTable/fusionNext'
 import BizChartsHello from '../pages/bizcharts/hello'
 import BizChartsRadar from '../pages/bizcharts/radar'
 import EChartsRadar from '../pages/echarts/radar'
+import Effect1 from '../pages/reactHooks/effect1'
 export default [
     { Component: Index, path: '/', label: '首页' },
     { Component: Fusion, path: '/fusion', label: 'fusion示例' },
@@ -27,4 +28,5 @@ export default [
     { Component: BizChartsHello, path: '/biz-charts-hello', label: 'bizCharts:hello' },
     { Component: BizChartsRadar, path: '/biz-charts-radar', label: 'bizCharts:雷达图(圆形)' },
     { Component: EChartsRadar, path: '/echarts-radar', label: 'echarts:雷达图(网形)' },
+    { Component: Effect1, path: '/effect1', label: 'effect1' },
 ] 
