@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>test loading</title>
+    <link rel="stylesheet" href="../../../public/loading.css">
+    <script src='../../../public/loading.js'></script>
+</head>
+
+<body>
+    <div class="ldBar" data-preset="circle" data-value="0"></div>
+    <script>
+        setTimeout(() => {
+            const dom = document.querySelector('.ldBar-label');
+            dom.innerHTML = `
+                <div class='label'>hello</div>
+                <div class='content'>world</div>
+            `
+            dom.style.display = 'block'
+        }, 1500)
+        var bar = new ldBar('.ldBar')
+        bar.set(80)
+    </script>
+</body>
+<style>
+    .ldBar {
+        width: 210px !important;
+        height: 210px !important;
+    }
+
+    svg {
+        transform: rotate(180deg);
+    }
+
+    .ldBar path.mainline {
+        stroke-width: 5;
+        stroke: #a37bec;
+        stroke-linecap: round;
+    }
+
+    .ldBar path.baseline {
+        stroke-width: 5;
+        stroke: #f1f2f3;
+        stroke-linecap: round;
+    }
+
+    .ldBar-label {
+        display: none;
+        font-family: 'varela round';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ldBar-label .label{
+        color:#999;
+        font-size: 12px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .ldBar-label .content{
+        color:#222;
+        font-size:28px;
+    }
+
+
+    .ldBar-label:after {
+        content: "";
+    }
+</style>
+
+</html>

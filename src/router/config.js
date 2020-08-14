@@ -13,6 +13,7 @@ import BizChartsHello from '../pages/bizcharts/hello'
 import BizChartsRadar from '../pages/bizcharts/radar'
 import EChartsRadar from '../pages/echarts/radar'
 import Effect1 from '../pages/reactHooks/effect1'
+import Loading from '../pages/loadingBar'
 export default [
     { Component: Index, path: '/', label: '首页' },
     { Component: Fusion, path: '/fusion', label: 'fusion示例' },
@@ -29,4 +30,5 @@ export default [
     { Component: BizChartsRadar, path: '/biz-charts-radar', label: 'bizCharts:雷达图(圆形)' },
     { Component: EChartsRadar, path: '/echarts-radar', label: 'echarts:雷达图(网形)' },
     { Component: Effect1, path: '/effect1', label: 'effect1' },
+    { Component: Loading, path: '/loading', label: '进度条' },
 ] 
