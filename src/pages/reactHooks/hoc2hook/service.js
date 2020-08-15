@@ -7,7 +7,6 @@ const queryAjax = (params = {}) => {
         ],
     });
 };
-
 export default {
     queryAjax
 }
