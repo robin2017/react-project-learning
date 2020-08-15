@@ -14,6 +14,7 @@ import BizChartsRadar from '../pages/bizcharts/radar'
 import EChartsRadar from '../pages/echarts/radar'
 import Effect1 from '../pages/reactHooks/effect1'
 import Progress from '../pages/fusion/progress'
+import DataBind from '../pages/reactHooks/databind'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -32,5 +33,5 @@ export default [
     { Component: EChartsRadar, path: '/echarts-radar', label: 'echarts:雷达图(网形)' },
     { Component: Effect1, path: '/effect1', label: 'effect1' },
     { Component: Progress, path: '/progress', label: '进度条' },
- 
+    { Component: DataBind, path: '/databind', label: '数据绑定' },
 ] 
