@@ -15,6 +15,7 @@ import EChartsRadar from '../pages/echarts/radar'
 import Effect1 from '../pages/reactHooks/effect1'
 import Progress from '../pages/fusion/progress'
 import DataBind from '../pages/reactHooks/databind'
+import Hoc2Hook from '../pages/reactHooks/hoc2hook/index3'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -34,4 +35,5 @@ export default [
     { Component: Effect1, path: '/effect1', label: 'effect1' },
     { Component: Progress, path: '/progress', label: '进度条' },
     { Component: DataBind, path: '/databind', label: '数据绑定' },
+    { Component: Hoc2Hook, path: '/hoc2hook', label: 'hoc和hook抽象' },
 ] 
