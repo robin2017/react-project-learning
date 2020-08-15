@@ -6,12 +6,12 @@ export const CompHoc = (Comp, dataAttr) => {
         const data = hook(hookParam);
         // 这里必须添加...props，否则渲染失败
         const newProps = {
-            [dataAttr]: data,
+            [dataAttr]: data||[],
             ...props,
         };
-        return <Loading visible={data==null} style={{width:'100%',height:'100%'}}>
+        return <Loading visible={data===null} style={{width:'100%',height:'100%'}}>
             {/* 没拿到数据就不渲染组件(这个策略不好！！！) */}
-            {data!==null&& <Comp {...newProps} />}
+            <Comp {...newProps} />
         </Loading>;
     };
 };
