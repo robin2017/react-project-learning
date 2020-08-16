@@ -18,6 +18,7 @@ import DataBind from '../pages/reactHooks/databind'
 import Hoc2Hook from '../pages/reactHooks/hoc2hook/index3'
 import ReduceRender from '../pages/reduceRender/index'
 import G2Hello from '../pages/g2/hello'
+import G2Radar from '../pages/g2/radar'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -40,4 +41,5 @@ export default [
     { Component: Hoc2Hook, path: '/hoc2hook', label: 'hoc和hook抽象' },
     { Component: ReduceRender, path: '/reduceRender', label: '减少重复渲染(查看控制台)' },
     { Component: G2Hello, path: '/g2hello', label: 'g2引擎-hello' },
+    { Component: G2Radar, path: '/g2radar', label: 'g2引擎-官方雷达图' },
 ] 
