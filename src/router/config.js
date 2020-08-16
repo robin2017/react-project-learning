@@ -17,6 +17,7 @@ import Progress from '../pages/fusion/progress'
 import DataBind from '../pages/reactHooks/databind'
 import Hoc2Hook from '../pages/reactHooks/hoc2hook/index3'
 import ReduceRender from '../pages/reduceRender/index'
+import G2Hello from '../pages/g2/hello'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -38,4 +39,5 @@ export default [
     { Component: DataBind, path: '/databind', label: '数据绑定' },
     { Component: Hoc2Hook, path: '/hoc2hook', label: 'hoc和hook抽象' },
     { Component: ReduceRender, path: '/reduceRender', label: '减少重复渲染(查看控制台)' },
+    { Component: G2Hello, path: '/g2hello', label: 'g2引擎-hello' },
 ] 
