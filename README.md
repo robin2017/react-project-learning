@@ -44,5 +44,7 @@
 + 底层实现是canvas或者svg
 + 缺点：需要自己适配react，一般采用useref
 
-
+#### 11、页面引导
++ 使用reactout包
++ style-components4.4.1版本有问题，样式注入失败！！
 

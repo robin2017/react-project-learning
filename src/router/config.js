@@ -19,6 +19,8 @@ import Hoc2Hook from '../pages/reactHooks/hoc2hook/index3'
 import ReduceRender from '../pages/reduceRender/index'
 import G2Hello from '../pages/g2/hello'
 import G2Radar from '../pages/g2/radar'
+import NewGuide from '../pages/newGuide'
+import TourGuide from '../pages/newGuide/tourTest'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -42,4 +44,6 @@ export default [
     { Component: ReduceRender, path: '/reduceRender', label: '减少重复渲染(查看控制台)' },
     { Component: G2Hello, path: '/g2hello', label: 'g2引擎-hello' },
     { Component: G2Radar, path: '/g2radar', label: 'g2引擎-官方雷达图' },
+    { Component: NewGuide, path: '/newguide', label: '页面引导' },
+    { Component: TourGuide, path: '/tourguide', label: '页面引导-tour' },
 ] 
