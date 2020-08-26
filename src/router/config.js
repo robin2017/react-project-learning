@@ -9,6 +9,7 @@ import FormilyQueryList from '../pages/formily/querylist'
 import FormilyInsertRecord from '../pages/formily/insertRecord'
 import FormTableAntd from '../pages/formTable/antd'
 import FormTableFusion from '../pages/formTable/fusionNext'
+import TableSelect from '../pages/fusion/table/select'
 import BizChartsHello from '../pages/bizcharts/hello'
 import BizChartsRadar from '../pages/bizcharts/radar'
 import EChartsRadar from '../pages/echarts/radar'
@@ -46,4 +47,5 @@ export default [
     { Component: G2Radar, path: '/g2radar', label: 'g2引擎-官方雷达图' },
     { Component: NewGuide, path: '/newguide', label: '页面引导' },
     { Component: TourGuide, path: '/tourguide', label: '页面引导-tour' },
+    { Component: TableSelect, path: '/tableSelect', label: '表格双向选择' },
 ] 
