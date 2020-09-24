@@ -24,6 +24,7 @@ import NewGuide from '../pages/newGuide'
 import TourGuide from '../pages/newGuide/tourTest'
  import PicFilter from '../pages/pic/index'
  import Axios from '../pages/axios'
+ import SetState from '../pages/react/setstate'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -52,4 +53,5 @@ export default [
     { Component: TableSelect, path: '/tableSelect', label: '表格双向选择' },
     { Component: PicFilter, path: '/pic', label: '图片蒙版' },
     { Component: Axios, path: '/axios', label: 'axios测试' },
+    { Component: SetState, path: '/setstate', label: 'state异步问题' },
 ] 
