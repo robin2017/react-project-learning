@@ -22,6 +22,8 @@ import G2Hello from '../pages/g2/hello'
 import G2Radar from '../pages/g2/radar'
 import NewGuide from '../pages/newGuide'
 import TourGuide from '../pages/newGuide/tourTest'
+ import PicFilter from '../pages/pic/index'
+ import Axios from '../pages/axios'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -48,4 +50,6 @@ export default [
     { Component: NewGuide, path: '/newguide', label: '页面引导' },
     { Component: TourGuide, path: '/tourguide', label: '页面引导-tour' },
     { Component: TableSelect, path: '/tableSelect', label: '表格双向选择' },
+    { Component: PicFilter, path: '/pic', label: '图片蒙版' },
+    { Component: Axios, path: '/axios', label: 'axios测试' },
 ] 
