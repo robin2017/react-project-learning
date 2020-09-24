@@ -14,12 +14,17 @@ export default class extends Component {
         // this.setState({count:this.state.count+1})
 
         //成功：传入状态计算函数，保证同步性
-        this.setState((prevState, props) => {
+        //此时prestate和this.state为两个变量
+        this.setState((prevState) => {
+            console.log(1,this.state.count,prevState.count)
             return { count: prevState.count + 1 }
         })
-        this.setState((prevState, props) => {
+        console.log(2)
+        this.setState((prevState) => {
+            console.log(3,this.state.count,prevState.count)
             return { count: prevState.count + 1 }
         })
+        console.log(4)
     }
     render() {
         return (
