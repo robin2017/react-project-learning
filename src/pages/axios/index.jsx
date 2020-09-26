@@ -28,7 +28,7 @@ export default () => {
         // axios.get('https://mocks.alibaba-inc.com/mock/OGSiFQmpd/cbs/message/pageGetMessageList').then(res => {
         //     console.log('axios对象返回数据：', res)
         // })
-        instance.get('https://mocks.alibaba-inc.com/mock/OGSiFQmpd/cbs/message/pageGetMessageList').then(res => {
+        instance.get('/api/persons').then(res => {
             console.log('axios实例返回数据：', res)
         })
 
