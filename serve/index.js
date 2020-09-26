@@ -25,7 +25,8 @@ myRouter.get('/api/personsCorsCookie', async (ctx) => {
     ctx.set('Access-Control-Allow-Origin','http://bota.com:3000')
     //配合前端：xhr.withCredentials = true;一起使用
     ctx.set('Access-Control-Allow-Credentials',true)
-    ctx.cookies.set('hello','world')
+    //samesite还需要配合https一起使用！！！
+    ctx.cookies.set('hello','world',{sameSite:"none"})
     ctx.body = JSON.stringify(persons)
 })
 
