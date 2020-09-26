@@ -12,7 +12,8 @@ myRouter.get('/api/persons', async (ctx) => {
     ctx.body = JSON.stringify(persons)
 })
 myRouter.get('/api/personsCors', async (ctx) => {
-    ctx.set('Access-Control-Allow-Origin','*')
+    //如果配完成，必须：协议+域名+端口
+    ctx.set('Access-Control-Allow-Origin','http://bota.com:3000')
     ctx.body = JSON.stringify(persons)
 })
 myRouter.get('/', async (ctx) => {
