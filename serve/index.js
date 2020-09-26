@@ -1,21 +1,21 @@
 const path = require('path')
-// const fs = require('fs')
+const fs = require('fs')
 const koa = require('koa')
 const static = require('koa-static')
 const router = require('koa-router')
-// const https = require('https')
-// const sslify = require('koa-sslify').default;//http强制HTTPS
+const https = require('https')
+const sslify = require('koa-sslify').default;//http强制HTTPS
 const staticPath = './public'
 const PORT = 12808;
 const persons = [{ name: 'robin' }, { name: 'bota' }]
 const app = new koa()
-// app.use(sslify())
+app.use(sslify())
 const myRouter = new router()
 app.use(static(path.join(__dirname, staticPath)))
-// var options = {
-//     key: fs.readFileSync('./private_key.pem'),  //私钥文件路径
-//     cert: fs.readFileSync('./ca-cert.pem')  //证书文件路径
-// };
+var options = {
+    key: fs.readFileSync('./private_key.pem'),  //私钥文件路径
+    cert: fs.readFileSync('./ca-cert.pem')  //证书文件路径
+};
 myRouter.get('/', async (ctx) => {
     ctx.body = 'hello,koa'
 })
@@ -39,9 +39,9 @@ myRouter.get('/api/personsCorsCookie', async (ctx) => {
 })
 
 app.use(myRouter.routes()).use(myRouter.allowedMethods());
-app.listen(PORT, () => {
-    console.log('koa服务器开启，地址为:http://localhost:' + PORT)
-})
-// https.createServer(options,app.callback()).listen(PORT,()=>{
+// app.listen(PORT, () => {
 //     console.log('koa服务器开启，地址为:http://localhost:' + PORT)
 // })
+https.createServer(options,app.callback()).listen(PORT,()=>{
+    console.log('koa服务器开启，地址为:https://localhost:' + PORT)
+})
