@@ -25,16 +25,16 @@ myRouter.get('/api/persons', async (ctx) => {
 })
 myRouter.get('/api/personsCors', async (ctx) => {
     //如果配完成，必须：协议+域名+端口
-    ctx.set('Access-Control-Allow-Origin','http://bota.com:3000')
+    ctx.set('Access-Control-Allow-Origin','*')
     ctx.body = JSON.stringify(persons)
 })
 myRouter.get('/api/personsCorsCookie', async (ctx) => {
     //如果配完成，必须：协议+域名+端口
-    ctx.set('Access-Control-Allow-Origin','http://bota.com:3000')
+    ctx.set('Access-Control-Allow-Origin','https://bota.com:3000')
     //配合前端：xhr.withCredentials = true;一起使用
     ctx.set('Access-Control-Allow-Credentials',true)
     //samesite还需要配合https一起使用！！！
-    ctx.cookies.set('hello','world',{sameSite:"none"})
+    ctx.cookies.set('hello','world',{sameSite:"none",secure:true})
     ctx.body = JSON.stringify(persons)
 })
 

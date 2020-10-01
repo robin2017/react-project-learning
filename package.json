@@ -24,6 +24,7 @@
     "mfetch": "^0.2.27",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-guide": "^1.2.9",
@@ -54,5 +55,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://bota.com:12808"
+  "proxy": "https://bota.com:12808"
 }

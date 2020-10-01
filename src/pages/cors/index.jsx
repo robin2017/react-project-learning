@@ -1,9 +1,9 @@
 import React from 'react'
 export default () => {
     const url1 = `api/persons`
-    const url2 = 'http://robin.com:12808/api/persons'
-    const url3 = 'http://robin.com:12808/api/personsCors'
-    const url4 = 'http://robin.com:12808/api/personsCorsCookie'
+    const url2 = 'https://robin.com:12808/api/persons'
+    const url3 = 'https://robin.com:12808/api/personsCors'
+    const url4 = 'https://robin.com:12808/api/personsCorsCookie'
     const sendRequest = (url,open) => {
         //ajax请求测试
         let xhr = new XMLHttpRequest()
