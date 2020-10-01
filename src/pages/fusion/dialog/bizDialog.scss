@@ -1,0 +1,15 @@
+.common-dialog {
+    width: 200px;
+    height: 100px;
+    .next-dialog-body {
+        height: 100%;
+    }
+    .next-dialog-footer {
+        padding: 0;
+    }
+}
+.biz-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

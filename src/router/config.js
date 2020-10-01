@@ -3,6 +3,7 @@ import Fusion from '../pages/fusion'
 import FusionForm from '../pages/fusion/form'
 import FusionTable from '../pages/fusion/table'
 import FusionShell from '../pages/fusion/shell'
+import FusionDialog from '../pages/fusion/dialog'
 import FormilyHello from '../pages/formily/hello/index-jsx'
 import FormilyHello2 from '../pages/formily/hello/index-json'
 import FormilyQueryList from '../pages/formily/querylist'
@@ -34,6 +35,7 @@ export default [
     { Component: FusionForm, path: '/fusion-form', label: 'fusion示例-表单' },
     { Component: FusionTable, path: '/fusion-table', label: 'fusion示例-表格' },
     { Component: FusionShell, path: '/fusion-shell', label: 'fusion示例-shell' },
+    { Component: FusionDialog, path: '/fusion-dialog', label: 'fusion示例-dialog模版' },
     { Component: FormilyHello, path: '/formily-hello', label: 'formily示例-hello-jsx-schema' },
     { Component: FormilyHello2, path: '/formily-hello2', label: 'formily示例-hello-json-schema' },
     { Component: FormilyQueryList, path: '/formily-query-list', label: 'formily示例-查询列表' },
