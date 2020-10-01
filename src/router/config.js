@@ -27,7 +27,7 @@ import TourGuide from '../pages/newGuide/tourTest'
  import Axios from '../pages/axios'
  import Cors from '../pages/cors'
  import SetState from '../pages/react/setstate'
-
+import Tab from '../pages/tab'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -59,4 +59,6 @@ export default [
     { Component: Axios, path: '/axios', label: 'axios测试' },
     { Component: Cors, path: '/cors', label: 'cors测试' },
     { Component: SetState, path: '/setstate', label: 'state异步问题' },
+    { Component: Tab, path: '/tabs/:tab', label: 'tab和URL联动' },
+    // {path: '/tabs', redirect: '/tabs/home'},
 ] 
