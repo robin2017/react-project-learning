@@ -48,3 +48,10 @@
 + 使用reactout包
 + style-components4.4.1版本有问题，样式注入失败！！
 
+#### 12、https登录时，需要在host文件中添加两个地址
++ 文件位置 ： /etc/hosts
+```
+    127.0.0.1 bota.com
+    127.0.0.1 robin.com
+```
+
