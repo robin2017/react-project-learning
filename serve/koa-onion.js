@@ -2,24 +2,27 @@
 const Koa = require('koa')
 const app = new Koa()
 const PORT = '3000'
-
-app.use(async (ctx, next) => {
-    console.log('start-1')
-    await next()
-    console.log('end-1')
+app.use((ctx, next) => {
+    console.log('1')
+    next()
+    console.log('5')
 })
-app.use(async (ctx, next) => {
-    console.log('start-2')
-    await next()
-    console.log('end-2')
+app.use((ctx, next) => {
+    console.log('2')
+    next()
+    console.log('4')
 })
-//参数带next的 必须在 参数不带next的 前面，否则失效
-app.use(async ctx => {
-    console.log('设置body')
+app.use(ctx => {
+    console.log('3-设置body')
     ctx.body = 'hello'
 })
 app.listen(PORT, () => {
     console.log(`服务启动：http://localhost:${PORT}`)
 })
-
+//输出结果
+// 1
+// 2
+// 3-设置body
+// 4
+// 5
 
