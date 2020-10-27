@@ -11,24 +11,30 @@ class Koa {
 }
 var app = new Koa()
 app.use(function (next) {
+    debugger
     console.log(1)
     next()
+    debugger
     console.log(3)
 })
 app.use(function (next) {
+    debugger
     console.log(2)
 })
 function compose(middlewares) {
     debugger
     function dispatch(index) {
+        debugger
         if (index === middlewares.length) return // 所有中间件都执行完了
-        const fn = middlewares[index]
+        const midFn = middlewares[index]
         //注意此处use只有一个参数next，没有ctx
-        fn(() => { dispatch(index + 1) })
+        midFn(
+            function nextFn() { dispatch(index + 1) }
+        )
     }
     dispatch(0)
 }
-compose(app.middlewares) 
+compose(app.middlewares)
 //返回结果
 // 1 2 3
 
