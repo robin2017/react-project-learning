@@ -8,3 +8,4 @@ import '@alifd/next/dist/next.css';
 ReactDOM.render( < Route/> ,
   document.getElementById('root')
 );
+
