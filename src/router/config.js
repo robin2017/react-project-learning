@@ -28,6 +28,7 @@ import TourGuide from '../pages/newGuide/tourTest'
  import Cors from '../pages/cors'
  import SetState from '../pages/react/setstate'
 import Tab from '../pages/tab'
+import AhooksHello from '../pages/ahooks/hello'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -60,5 +61,6 @@ export default [
     { Component: Cors, path: '/cors', label: 'cors测试' },
     { Component: SetState, path: '/setstate', label: 'state异步问题' },
     { Component: Tab, path: '/tabs/:tab', label: 'tab和URL联动' },
-    // {path: '/tabs', redirect: '/tabs/home'},
+    //   {path: '/tabs', redirect: '/tabs/home'},
+    { Component: AhooksHello, path: '/ahookhello', label: 'ahook-hello' },
 ] 

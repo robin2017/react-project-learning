@@ -11,6 +11,7 @@
     "@formily/next": "^1.2.11",
     "@formily/next-components": "^1.2.11",
     "@formily/printer": "^1.2.11",
+    "ahooks": "^2.7.1",
     "antd": "^4.5.2",
     "axios": "^0.20.0",
     "bizcharts": "^4.0.12",
