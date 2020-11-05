@@ -16,7 +16,8 @@ class Koa {
          *  将控制流程传递下去
          *  异步时：async next()表明next必须有返回，这里需要两个return
          */
-        return midFn(() => { return this.dispatch(index + 1) })
+        // return midFn(() => { return this.dispatch(index + 1) })
+        return midFn(this.dispatch.bind(this, index + 1))
     }
     compose() {//类似event中trigger
         this.dispatch(0)
