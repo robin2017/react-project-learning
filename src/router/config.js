@@ -29,6 +29,7 @@ import TourGuide from '../pages/newGuide/tourTest'
  import SetState from '../pages/react/setstate'
 import Tab from '../pages/tab'
 import Table from '../pages/table'
+import Group from '../pages/table/group'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -62,5 +63,6 @@ export default [
     { Component: SetState, path: '/setstate', label: 'state异步问题' },
     { Component: Tab, path: '/tabs/:tab', label: 'tab和URL联动' },
     { Component: Table, path: '/table', label: '表格-行列合并' },
+    { Component: Group, path: '/group', label: '表格-分组列表' },
     // {path: '/tabs', redirect: '/tabs/home'},
 ] 
