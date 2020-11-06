@@ -198,8 +198,8 @@ class App extends React.Component {
         return (
             <div>
                 <p><Button onClick={this.toggleGroupSelection}>Toggle GroupHeader Selection</Button></p>
-                <Table dataSource={dataSource} rowSelection={rowSelection} cellProps={cellProps}>
-                    <Table.GroupHeader cell={groupHeaderRender} hasChildrenSelection={this.state.hasSelection} />
+                <Table dataSource={dataSource} rowSelection={rowSelection} >
+                    <Table.GroupHeader cell={groupHeaderRender}/>
                     <Table.GroupFooter cell={groupHeaderRender} />
                     <Table.Column cell={productRender} title="Product Details" dataIndex="product" />
                     <Table.Column cell={priceRender} title="Price" dataIndex="price" width={120} />
