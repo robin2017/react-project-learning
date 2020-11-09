@@ -158,8 +158,10 @@ const dataSource = [
             return 'No Priced';
         }
     },
-    operRender = function () {
-        return <a href="javascript:;">View</a>;
+    operRender = function (a, b, c, d) {
+        return <a href="javascript:;" onClick={() => {
+            console.log(a, b, c, d)
+        }}>View</a>;
     },
     groupHeaderRender = function (record) {
         return <div>{record.product[0].title}</div>;
@@ -184,7 +186,7 @@ const cellProps = (rowIndex, colIndex, dataIndex, record) => {
     }
 };
 
-class App extends React.Component {
+export default class App extends React.Component {
     state = {
         hasSelection: false
     }
@@ -198,8 +200,8 @@ class App extends React.Component {
         return (
             <div>
                 <p><Button onClick={this.toggleGroupSelection}>Toggle GroupHeader Selection</Button></p>
-                <Table dataSource={dataSource} rowSelection={rowSelection} >
-                    <Table.GroupHeader cell={groupHeaderRender}/>
+                <Table dataSource={dataSource} rowSelection={rowSelection} cellProps={cellProps}>
+                    <Table.GroupHeader cell={groupHeaderRender} hasChildrenSelection={this.state.hasSelection} />
                     <Table.GroupFooter cell={groupHeaderRender} />
                     <Table.Column cell={productRender} title="Product Details" dataIndex="product" />
                     <Table.Column cell={priceRender} title="Price" dataIndex="price" width={120} />
@@ -211,4 +213,4 @@ class App extends React.Component {
     }
 }
 
-export default App
+
