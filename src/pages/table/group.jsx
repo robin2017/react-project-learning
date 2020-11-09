@@ -171,29 +171,25 @@ const dataSource = [
     },
 
     groupHeaderRender = function (record) {
-        return <div>{record.product[0].title}</div>;
+        return null
     },
     rowSelection = {
         onChange: function (selectedKeys) {
             console.log(selectedKeys);
         }
-    }
+    },
+    groupCombines = ['op', 'status']
+ 
 const cellProps = (rowIndex, colIndex, dataIndex, record) => {
-    if (colIndex === 5 && record.index === 0) {
+    if ( groupCombines.includes(dataIndex) && record.index===0) {
         let rowSpan = dataSource[record.parent].children.length
         console.log(colIndex, record, rowSpan)
         return {
             rowSpan
         };
     }
-
-    if (colIndex === 4 && record.index === 0) {
-        let rowSpan = dataSource[record.parent].children.length
-        console.log(colIndex, record, rowSpan)
-        return {
-            rowSpan
-        };
-    }
+ 
+    
 };
 
 export default class App extends React.Component {
@@ -211,13 +207,13 @@ export default class App extends React.Component {
             <div>
                 <p><Button onClick={this.toggleGroupSelection}>Toggle GroupHeader Selection</Button></p>
                 <Table dataSource={dataSource} rowSelection={rowSelection} cellProps={cellProps}>
-                    <Table.GroupHeader cell={groupHeaderRender} hasChildrenSelection={this.state.hasSelection} />
-                    <Table.GroupFooter cell={groupHeaderRender} />
+                    <Table.GroupHeader cell={null}  />
+                    {/* <Table.GroupFooter cell={groupHeaderRender} /> */}
                     <Table.Column cell={productRender} title="Product Details" dataIndex="product" />
                     <Table.Column cell={priceRender} title="Price" dataIndex="price" width={120} />
-                    <Table.Column cell={operRenderSingle} title="singleOperation" width={100} />
+                    <Table.Column cell={operRenderSingle} title="singleOperation" dataIndex="singleOp" width={100} />
                     <Table.Column cell={statusRender} title="Status" dataIndex="status" width={100} />
-                    <Table.Column cell={operRender} title="Operation" width={100} />
+                    <Table.Column cell={operRender} title="Operation" dataIndex="op" width={100} />
                 </Table>
             </div>
         );
