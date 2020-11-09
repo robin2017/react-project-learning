@@ -158,11 +158,18 @@ const dataSource = [
             return 'No Priced';
         }
     },
-    operRender = function (a, b, c, d) {
+    operRender = function (a, index, c, d) {
         return <a href="javascript:;" onClick={() => {
-            console.log(a, b, c, d)
+            console.log(a, index, c, d)
+            console.log('all:', dataSource[index])
         }}>View</a>;
     },
+    operRenderSingle = function (a, b, record, d) {
+        return <a href="javascript:;" onClick={() => {
+            console.log('single:', record)
+        }}>View</a>;
+    },
+
     groupHeaderRender = function (record) {
         return <div>{record.product[0].title}</div>;
     },
@@ -170,18 +177,21 @@ const dataSource = [
         onChange: function (selectedKeys) {
             console.log(selectedKeys);
         }
-    };
-
+    }
 const cellProps = (rowIndex, colIndex, dataIndex, record) => {
-    if (colIndex === 3 && record.index === 0) {
+    if (colIndex === 5 && record.index === 0) {
+        let rowSpan = dataSource[record.parent].children.length
+        console.log(colIndex, record, rowSpan)
         return {
-            rowSpan: dataSource[record.parent].children.length
+            rowSpan
         };
     }
 
     if (colIndex === 4 && record.index === 0) {
+        let rowSpan = dataSource[record.parent].children.length
+        console.log(colIndex, record, rowSpan)
         return {
-            rowSpan: dataSource[record.parent].children.length
+            rowSpan
         };
     }
 };
@@ -205,6 +215,7 @@ export default class App extends React.Component {
                     <Table.GroupFooter cell={groupHeaderRender} />
                     <Table.Column cell={productRender} title="Product Details" dataIndex="product" />
                     <Table.Column cell={priceRender} title="Price" dataIndex="price" width={120} />
+                    <Table.Column cell={operRenderSingle} title="singleOperation" width={100} />
                     <Table.Column cell={statusRender} title="Status" dataIndex="status" width={100} />
                     <Table.Column cell={operRender} title="Operation" width={100} />
                 </Table>
