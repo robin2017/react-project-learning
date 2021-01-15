@@ -144,7 +144,7 @@ const dataSource = [
 ],
     productRender = function (product) {
         return (<div className="media">
-            <img src={product[0].avatar} className="media-side" />
+
             <div className="media-content">{product[0].title}</div>
         </div>);
     },
@@ -173,11 +173,11 @@ const dataSource = [
     groupHeaderRender = function (record) {
         return null
     },
-    rowSelection = {
-        onChange: function (selectedKeys) {
-            console.log(selectedKeys);
-        }
-    },
+    // rowSelection = {
+    //     onChange: function (selectedKeys) {
+    //         console.log(selectedKeys);
+    //     }
+    // },
     groupCombines = ['op', 'status']
  
 const cellProps = (rowIndex, colIndex, dataIndex, record) => {
@@ -205,15 +205,14 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <p><Button onClick={this.toggleGroupSelection}>Toggle GroupHeader Selection</Button></p>
-                <Table dataSource={dataSource} rowSelection={rowSelection} cellProps={cellProps}>
-                    <Table.GroupHeader cell={null}  />
-                    {/* <Table.GroupFooter cell={groupHeaderRender} /> */}
+   
+                <Table dataSource={dataSource} >
+                    <Table.GroupHeader cell={null}/>
                     <Table.Column cell={productRender} title="Product Details" dataIndex="product" />
                     <Table.Column cell={priceRender} title="Price" dataIndex="price" width={120} />
-                    <Table.Column cell={operRenderSingle} title="singleOperation" dataIndex="singleOp" width={100} />
+      
                     <Table.Column cell={statusRender} title="Status" dataIndex="status" width={100} />
-                    <Table.Column cell={operRender} title="Operation" dataIndex="op" width={100} />
+     
                 </Table>
             </div>
         );
