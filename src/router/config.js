@@ -30,7 +30,7 @@ import TourGuide from '../pages/newGuide/tourTest'
 import Tab from '../pages/tab'
 import Table from '../pages/table'
 import Group from '../pages/table/group'
- 
+import UseTable from '../pages/use-table'
 export default [
     { Component: Index, path: '/', label: '首页' },
     { Component: Fusion, path: '/fusion', label: 'fusion示例' },
@@ -64,5 +64,6 @@ export default [
     { Component: Tab, path: '/tabs/:tab', label: 'tab和URL联动' },
     { Component: Table, path: '/table', label: '表格-行列合并' },
     { Component: Group, path: '/group', label: '表格-分组列表' },
+    {Component:UseTable,path:'/use-table',label:'useTable使用'}
     // {path: '/tabs', redirect: '/tabs/home'},
 ] 
