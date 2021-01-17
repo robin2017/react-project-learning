@@ -28,11 +28,12 @@ import TourGuide from '../pages/newGuide/tourTest'
  import Cors from '../pages/cors'
  import SetState from '../pages/react/setstate'
 import Tab from '../pages/tab'
-<<<<<<< HEAD
+ 
 import AhooksHello from '../pages/ahooks/hello'
-=======
-import Table from '../pages/table'
->>>>>>> 0a486b7275d343a6a8ee02ce10de66eb090dddcd
+ import Table from '../pages/table'
+ import Group from '../pages/table/group'
+ import UseTable from '../pages/use-table'
+ 
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -68,6 +69,8 @@ export default [
     //   {path: '/tabs', redirect: '/tabs/home'},
     { Component: AhooksHello, path: '/ahookhello', label: 'ahook-hello' },
     { Component: Table, path: '/table', label: '表格-行列合并' },
+    { Component: Group, path: '/group', label: '表格-分组列表' },
+    {Component:UseTable,path:'/use-table',label:'useTable使用'}
     // {path: '/tabs', redirect: '/tabs/home'},
  
 ] 
