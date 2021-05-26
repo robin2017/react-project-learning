@@ -5,6 +5,7 @@ import {
     Submit,
     Reset
 } from '@formily/next'
+import './index.css'
 import { Input, Select,ArrayTable } from '@formily/next-components'
 export default () => {
     return (
@@ -31,7 +32,7 @@ export default () => {
                         "x-component":'ArrayTable',
                         'x-component-props': {
                             pagination: { pageSize: 10 },
-                            style: { width: '600px' },
+                            style: { width: '100%' },
                           },
                         items:{
                             type:'object',
@@ -40,36 +41,15 @@ export default () => {
                                     type: 'string',
                                     title:'name',
                                     'x-component': 'Input',
-                                    'x-component-props': { width: 200,   },
-                                    // properties: {
-                                    //   a1: {
-                                    //     type: 'string',
-               
-                                    //     'x-component': 'Input',
-                                    //   },
-                                    // },
+                                    'x-component-props': { width: 100,   },
                                   },
-                            
-                                // column1:{
-                                //     type:'string',
-                                //     title:"name",
-                                //     'x-component-props': { width: 80, title: 'Sort', align: 'center' },
-                                //     'x-component': 'ArrayTable.Column',
-                                //     properties: {
-                                //         a1: {
-                                //           type: 'string',
-                                       
-                                //           'x-component': 'Input',
-                                //         },
-                                //       },
-
-                                // },
-                                // column2:{
-                                //     type:'string',
-                                //     title:"age",
-                                //     // 'x-component-props': { width: 200, title: 'A4' },
-                                //     "x-component":"Input"
-                                // }
+                                  column4: {
+                                    type: 'string',
+                                    title:'age',
+                                    'x-component': 'Input',
+                                    'x-component-props': { width: 100,   },
+                                 
+                                  }
                             }
                         }
                     }
