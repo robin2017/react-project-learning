@@ -28,11 +28,12 @@ import TourGuide from '../pages/newGuide/tourTest'
  import Cors from '../pages/cors'
  import SetState from '../pages/react/setstate'
 import Tab from '../pages/tab'
- 
+ import UseCallbackState from '../pages/usecallbackstate'
 import AhooksHello from '../pages/ahooks/hello'
  import Table from '../pages/table'
  import Group from '../pages/table/group'
  import UseTable from '../pages/use-table'
+import Usecallbackstate from '../pages/usecallbackstate'
  
  
 export default [
@@ -70,7 +71,8 @@ export default [
     { Component: AhooksHello, path: '/ahookhello', label: 'ahook-hello' },
     { Component: Table, path: '/table', label: '表格-行列合并' },
     { Component: Group, path: '/group', label: '表格-分组列表' },
-    {Component:UseTable,path:'/use-table',label:'useTable使用'}
+    {Component:UseTable,path:'/use-table',label:'useTable使用'},
+    {Component:Usecallbackstate,path:'/use-callbackstate',label:'useState回掉函数'}
     // {path: '/tabs', redirect: '/tabs/home'},
  
 ] 

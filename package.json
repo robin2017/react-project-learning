@@ -40,7 +40,8 @@
     "start": "react-scripts start",
     "serve": "cd serve && node index.js",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "push":"git add . && git commit -m \"auto save\" && git push "
   },
   "eslintConfig": {
     "extends": "react-app"
