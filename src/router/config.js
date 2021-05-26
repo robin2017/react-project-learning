@@ -34,6 +34,7 @@ import AhooksHello from '../pages/ahooks/hello'
  import Group from '../pages/table/group'
  import UseTable from '../pages/use-table'
 import Usecallbackstate from '../pages/usecallbackstate'
+import ArrayTable from '../pages/formily/array-table'
  
  
 export default [
@@ -72,7 +73,9 @@ export default [
     { Component: Table, path: '/table', label: '表格-行列合并' },
     { Component: Group, path: '/group', label: '表格-分组列表' },
     {Component:UseTable,path:'/use-table',label:'useTable使用'},
+    { Component: ArrayTable, path: '/array-table', label: '自增列表' },
     {Component:Usecallbackstate,path:'/use-callbackstate',label:'useState回掉函数'}
     // {path: '/tabs', redirect: '/tabs/home'},
+
  
 ] 
