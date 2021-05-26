@@ -35,6 +35,7 @@ import AhooksHello from '../pages/ahooks/hello'
  import UseTable from '../pages/use-table'
 import Usecallbackstate from '../pages/usecallbackstate'
 import ArrayTable from '../pages/formily/array-table'
+import ArrayTableSchema from '../pages/formily/array-table'
  
  
 export default [
@@ -44,7 +45,7 @@ export default [
     { Component: FusionTable, path: '/fusion-table', label: 'fusion示例-表格' },
     { Component: FusionShell, path: '/fusion-shell', label: 'fusion示例-shell' },
     { Component: FusionDialog, path: '/fusion-dialog', label: 'fusion示例-dialog模版' },
-    { Component: FormilyHello, path: '/formily-hello', label: 'formily示例-hello-jsx-schema' },
+    { Component: FormilyHello, path: '/formily-hello', label: '(加自增列表)formily示例-hello-jsx-schema' },
     { Component: FormilyHello2, path: '/formily-hello2', label: 'formily示例-hello-json-schema' },
     { Component: FormilyQueryList, path: '/formily-query-list', label: 'formily示例-查询列表' },
     { Component: FormilyInsertRecord, path: '/formily-insert-record', label: 'formily示例-插入记录' },
@@ -74,6 +75,7 @@ export default [
     { Component: Group, path: '/group', label: '表格-分组列表' },
     {Component:UseTable,path:'/use-table',label:'useTable使用'},
     { Component: ArrayTable, path: '/array-table', label: '自增列表' },
+    { Component: ArrayTableSchema, path: '/array-table', label: '自增列表schema' },
     {Component:Usecallbackstate,path:'/use-callbackstate',label:'useState回掉函数'}
     // {path: '/tabs', redirect: '/tabs/home'},
 
