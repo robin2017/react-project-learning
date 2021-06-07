@@ -7,22 +7,34 @@ import {
     Reset
 } from '@formily/next'
 import { Input, ArrayTable } from "@formily/next-components";
-import {   Select } from '@alifd/next'
+import {   Select,DatePicker } from '@alifd/next'
+const TextArea  = Input.TextArea
+const { RangePicker, MonthPicker, YearPicker, WeekPicker } = DatePicker;
 // 参考文档 https://fusion.formilyjs.org/components/array-table
 export default () => {
     return (
         <SchemaForm
-            components={{ Input, Select,ArrayTable }}
+            components={{ Input, Select,ArrayTable,TextArea,RangePicker }}
             onSubmit={console.log}>
             <Field type="string"
                 name="name"
-                title="姓名"
+                title="姓名111"
                 x-component="Input" />
             <Field type="string"
                 name="gender"
                 title="性别"
                 enum={['男', '女']}
                 x-component="Select" />
+                            <Field type="string"
+                name="date"
+                title="日期"
+   
+                x-component="RangePicker" />
+                   <Field type="string"
+                name="other"
+                title="其他"
+        
+                x-component="TextArea" />
             <Field
                 title="用户列表"
                 name='userList'
