@@ -1,21 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
     SchemaForm,
     SchemaMarkupField as Field,
     FormButtonGroup,
     Submit,
-    Reset
+    Reset,
+ 
+    LifeCycleTypes
 } from '@formily/next'
 import { Input, ArrayTable } from "@formily/next-components";
-import {   Select,DatePicker } from '@alifd/next'
+import {   Select,DatePicker  } from '@alifd/next'
 const TextArea  = Input.TextArea
-const { RangePicker, MonthPicker, YearPicker, WeekPicker } = DatePicker;
+const { RangePicker  } = DatePicker;
+ 
 // 参考文档 https://fusion.formilyjs.org/components/array-table
 export default () => {
+ 
+
+
     return (
         <SchemaForm
+            // effect实现联动，替代field
+            effects={($,{setFieldState})=>{
+                $(LifeCycleTypes.ON_FIELD_VALUE_CHANGE, 'gender').subscribe(
+                    fieldState => {
+                      setFieldState('other', state => {
+                        state.visible = fieldState.value === '男'
+                      })
+                    }
+                  )
+            }}
             components={{ Input, Select,ArrayTable,TextArea,RangePicker }}
-            onSubmit={console.log}>
+            onSubmit={()=>{
+          
+            }}>
             <Field type="string"
                 name="name"
                 title="姓名111"
