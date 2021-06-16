@@ -36,7 +36,8 @@ import AhooksHello from '../pages/ahooks/hello'
 import Usecallbackstate from '../pages/usecallbackstate'
 import ArrayTable from '../pages/formily/array-table'
 import ArrayTableSchema from '../pages/formily/array-table'
- 
+import ArrayTableFusion from '../pages/array-table-fusion'
+
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -76,7 +77,8 @@ export default [
     {Component:UseTable,path:'/use-table',label:'useTable使用'},
     { Component: ArrayTable, path: '/array-table', label: '自增列表' },
     { Component: ArrayTableSchema, path: '/array-table', label: '自增列表schema' },
-    {Component:Usecallbackstate,path:'/use-callbackstate',label:'useState回掉函数'}
+    {Component:Usecallbackstate,path:'/use-callbackstate',label:'useState回掉函数'},
+    { Component: ArrayTableFusion, path: '/array-table-fusion', label: '自增列表-fusion' },
     // {path: '/tabs', redirect: '/tabs/home'},
 
  
