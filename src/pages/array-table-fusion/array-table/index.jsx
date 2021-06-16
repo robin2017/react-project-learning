@@ -3,6 +3,7 @@ import {Table,Input,Select,Button} from '@alifd/next'
 import ColumnInput from './column-input' // 没有任何增增强的Input
 const TableColumn = Table.Column
 // bota1、formitem的孩子组件必须具有value/onChange属性,且额外需要name属性(怎么处理？)
+// formItem如何利用孩子name？？
 function ArrayTable({value=[],onChange}) {
   const [dataSource,setDataSource] = useState(value)
   useEffect(()=>{
