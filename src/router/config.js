@@ -37,7 +37,7 @@ import Usecallbackstate from '../pages/usecallbackstate'
 import ArrayTable from '../pages/formily/array-table'
 import ArrayTableSchema from '../pages/formily/array-table'
 import ArrayTableFusion from '../pages/array-table-fusion'
-
+import SelfForm from '../pages/form'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -79,6 +79,7 @@ export default [
     { Component: ArrayTableSchema, path: '/array-table', label: '自增列表schema' },
     {Component:Usecallbackstate,path:'/use-callbackstate',label:'useState回掉函数'},
     { Component: ArrayTableFusion, path: '/array-table-fusion', label: '自增列表-fusion' },
+    { Component: SelfForm, path: '/self-form', label: '自定义form' },
     // {path: '/tabs', redirect: '/tabs/home'},
 
  
