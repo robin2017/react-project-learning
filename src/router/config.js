@@ -38,6 +38,7 @@ import ArrayTable from '../pages/formily/array-table'
 import ArrayTableSchema from '../pages/formily/array-table'
 import ArrayTableFusion from '../pages/array-table-fusion'
 import SelfForm from '../pages/form'
+import GetChildren from '../pages/getChildren'
  
 export default [
     { Component: Index, path: '/', label: '首页' },
@@ -80,6 +81,7 @@ export default [
     {Component:Usecallbackstate,path:'/use-callbackstate',label:'useState回掉函数'},
     { Component: ArrayTableFusion, path: '/array-table-fusion', label: '自增列表-fusion' },
     { Component: SelfForm, path: '/self-form', label: '自定义form' },
+    { Component: GetChildren, path: '/get-children', label: '获取Children' },
     // {path: '/tabs', redirect: '/tabs/home'},
 
  
